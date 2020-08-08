@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int i, x;
+   char str[100];
+
+   cout<<"Please enter a string:"<< endl;
+   gets(str);
+   cout<<"select a option:"<<endl;
+   cout<<"1 = Encrypt the string"<<endl;
+   cout<<"2 = Decrypt the string"<<endl;
+   cin>>x;
+   switch(x)
+   {
+   case 1:
+      for(i=0;str[i]!='\0';i++)
+        str[i] = str[i]+5;
+      cout<<"Encrypted string: "<<str;
+      break;
+
+   case 2:
+      for(i=0;str[i]!='\0'; i++)
+        str[i] = str[i]- 5;
+      cout<<"Decrypted string: "<<str;
+      break;
+
+   default:
+      cout<<"invalid option";
+   }
+   return 0;
+}
