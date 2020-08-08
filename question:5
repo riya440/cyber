@@ -1,0 +1,24 @@
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+    char str[100],even_position='$',odd_position='#';
+    int repeat, ascii,i,j;
+    cout<<"enter the string: "<<endl;
+     gets(str);
+    for (i=0;i<= strlen(str);i++)
+    {
+        ascii=str[i];
+        repeat = ascii >= 97 ? ascii - 96 : ascii - 64;
+        for (j=0; j < repeat; j++)
+        {
+            if (i % 2 == 0)
+                cout << odd_position;
+            else
+                cout << even_position;
+        }
+    }
+}
+
+
